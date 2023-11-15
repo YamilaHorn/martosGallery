@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    
+    <title>MartosGallery</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="contenedor-header">
+    <header>
+      <div class="logo"></div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+          <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+          <li><a href="#miarte" onclick="seleccionar()">MI ARTE</a></li>
+          <li><a href="#portfolio" onclick="seleccionar()">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+  </div>
+
+  
+
+    <section id="miarte" class="miarte">
+      <div class="box">
+        <span style="--i:1;"><img src="img/ojo.jpeg" alt=""></span>
+        <span style="--i:2;"><img src="img/gato.jpg" alt=""></span>
+        <span style="--i:3;"><img src="img/images.jpeg" alt=""></span>
+        <span style="--i:4;"><img src="img/mujer.jpg" alt=""></span>
+        <span style="--i:5;"><img src="img/vangog.jpg" alt=""></span>
+        <span style="--i:6;"><img src="img/ojos2.jpeg" alt=""></span>
+        <span style="--i:7;"><img src="img/arte mujer.jpg" alt=""></span>
+        <span style="--i:8;"><img src="img/pincel.jpg" alt=""></span>
+      </div>
+      
+      <script type="text/javascript">
+        let box = document.querySelector('.box');
+        window.onmousemove = function(e){
+          let x = e.clientX/3;
+          box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+        }
+        </script>
+      </section>
+</body>
+</html>
