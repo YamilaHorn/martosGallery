@@ -18,19 +18,22 @@
     />
 
     
-    <title>MartosGallery</title>
+    <title>Martos Gallery</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
+  <!-- MENU ENCABEZADO -->
+
   <div class="contenedor-header">
     <header>
       <div class="logo"></div>
       <nav id="nav">
         <ul>
-          <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-          <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
           <li><a href="#miarte" onclick="seleccionar()">MI ARTE</a></li>
-          <li><a href="#portfolio" onclick="seleccionar()">CONTACTO</a></li>
+          <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+          <li><a href="#referencias" onclick="seleccionar()">REFERENCIAS</a></li>
+          <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
         </ul>
       </nav>
       <div class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -39,7 +42,7 @@
     </header>
   </div>
 
-  
+ <!-- SECCION MI ARTE -->
 
     <section id="miarte" class="miarte">
       <div class="box">
@@ -60,6 +63,10 @@
           box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
         }
         </script>
-      </section>
+    </section>
+
+  <!-- SECCION SOBRE MI -->
+
+  
 </body>
 </html>

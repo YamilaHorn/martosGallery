@@ -4,13 +4,19 @@
     box-sizing: border-box;
 }
 body {
-    display: flex;
+    background-size: cover;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(../img/pexels-eberhard-grossgasteiger-1421903.jpg);
-    background-size: cover;
 }
+
+html{
+    /*me permite deslizar cuando hago click en los links del menu*/
+    scroll-behavior: smooth;
+}
+
+
+
 .box {
     position: relative;
     width: 200px;
@@ -18,6 +24,7 @@ body {
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateY(0deg);
     /*animation: animate 20s linear infinite;*/
+    
 }
 .box span {
     position: absolute;
@@ -42,9 +49,23 @@ body {
 
 /*MENU*/
 
+.miarte{
+    position: relative;
+    background-image: url('./img/temp.jpg') !important;
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    align-items: center;
+    height: 100vh; /* Esto establece la altura de la sección al 100% del viewport height */
+    margin: 0; /* Asegura que no haya márgenes alrededor de la sección */
+    justify-content: center;
+    padding: 0;   
+}
+
 .contenedor-header {
-    background:rgba(30, 35, 38, 0.5);
-    position: fixed;
+    background-image: url("./img/menu.jpg");
+    background-position: center;
+    background-size: cover;
     width: 100%;
     top: 0;
     left:0;
@@ -96,4 +117,23 @@ body {
     cursor: pointer;
     display: none;
 }
+
+
+
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    color: #fff; /* Color del texto en el overlay */
+    position: absolute; /* Establecer la posición a absolute para que el overlay sea fijo */
+    top: 0;
+    right: -100%; /* Desplazar el overlay fuera de la tarjeta */
+    width: 100%; /* Ancho del overlay */
+    height: 100%; /* Altura del overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.8s;
+    cursor: pointer;
+  }
 
