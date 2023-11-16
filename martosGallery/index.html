@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
       rel="stylesheet"
@@ -17,56 +17,96 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
 
-    
     <title>Martos Gallery</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <!-- MENU ENCABEZADO -->
 
-  <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+      <header>
+        <div class="logo"></div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#miarte" onclick="seleccionar()">MI ARTE</a></li>
+            <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+            <li>
+              <a href="#referencias" onclick="seleccionar()">REFERENCIAS</a>
+            </li>
+            <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
-  <div class="contenedor-header">
-    <header>
-      <div class="logo"></div>
-      <nav id="nav">
-        <ul>
-          <li><a href="#miarte" onclick="seleccionar()">MI ARTE</a></li>
-          <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-          <li><a href="#referencias" onclick="seleccionar()">REFERENCIAS</a></li>
-          <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
-        </ul>
-      </nav>
-      <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-        <i class="fa-solid fa-bars"></i>
+    <!-- SECCION MI ARTE -->
+    <div id="contenedor-carrusel">
+      <section id="miarte" class="miarte">
+        <div class="box">
+          <span style="--i: 1"><img src="img/ojo.jpeg" alt="" /></span>
+          <span style="--i: 2"><img src="img/gato.jpg" alt="" /></span>
+          <span style="--i: 3"><img src="img/images.jpeg" alt="" /></span>
+          <span style="--i: 4"><img src="img/mujer.jpg" alt="" /></span>
+          <span style="--i: 5"><img src="img/vangog.jpg" alt="" /></span>
+          <span style="--i: 6"><img src="img/ojos2.jpeg" alt="" /></span>
+          <span style="--i: 7"><img src="img/arte mujer.jpg" alt="" /></span>
+          <span style="--i: 8"><img src="img/pincel.jpg" alt="" /></span>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript">
+      let carruselContainer = document.getElementById("contenedor-carrusel");
+      let box = document.querySelector(".box");
+
+      carruselContainer.onmousemove = function (e) {
+        let x = e.clientX / 3;
+        box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+      };
+
+      // Para detener el carrusel cuando el mouse sale del área del carrusel
+      carruselContainer.onmouseleave = function () {
+        box.style.transform = "perspective(1000px) rotateY(0deg)"; // Vuelve a la posición original
+      };
+    </script>
+
+    <!-- SECCION SOBRE MI -->
+
+    <section id="sobremi" class="sobre-mi">
+      <div class="foto-circulo">
+        <img src="./img/mujer.jpg" alt="Tu foto" />
       </div>
-    </header>
-  </div>
-
- <!-- SECCION MI ARTE -->
-
-    <section id="miarte" class="miarte">
-      <div class="box">
-        <span style="--i:1;"><img src="img/ojo.jpeg" alt=""></span>
-        <span style="--i:2;"><img src="img/gato.jpg" alt=""></span>
-        <span style="--i:3;"><img src="img/images.jpeg" alt=""></span>
-        <span style="--i:4;"><img src="img/mujer.jpg" alt=""></span>
-        <span style="--i:5;"><img src="img/vangog.jpg" alt=""></span>
-        <span style="--i:6;"><img src="img/ojos2.jpeg" alt=""></span>
-        <span style="--i:7;"><img src="img/arte mujer.jpg" alt=""></span>
-        <span style="--i:8;"><img src="img/pincel.jpg" alt=""></span>
+      <div class="texto-sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>
+          <span>Hola, soy Martin Sosa.</span>
+          jsdhfsjkljkljklkjliolfghfghdkjgfhdfkghfdkjghfkdghklfdhgkjfdhglfgghlfhgfoldfkghdfkghkfdghdfghdfhgdfkhgdjkljkljklkjlkljlkjlyujkljkljkljklkfhgdkfhgkdfhgkjhgfdjhgkdjfhgkfjdhgkfdjhgkjdfhgdfughdkjhgkfdugduruhjkhgkjfhdhcgiudfghk
+        </p>
       </div>
-      
-      <script type="text/javascript">
-        let box = document.querySelector('.box');
-        window.onmousemove = function(e){
-          let x = e.clientX/3;
-          box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
-        }
-        </script>
     </section>
 
-  <!-- SECCION SOBRE MI -->
 
-  
-</body>
+    <!-- SECCION CONTACTO -->
+
+    <section id="contacto" class="seccion-contacto">
+      <h2>Contacto</h2>
+      <div class="iconos-contacto">
+        <a href="tu_enlace_de_whatsapp" target="_blank" >
+          <i class="fa-brands fa-whatsapp" style="color: #000000;"></i>
+        </a>
+        <a href="tu_enlace_de_instagram" target="_blank">
+          <i class="fa-brands fa-instagram" style="color: #000000;"></i>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer>
+      <a href="#miarte" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+    </footer>
+
+    
+  </body>
 </html>
